@@ -18,7 +18,7 @@
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
 #define KC_CTAB MT(MOD_LCTL, KC_TAB)
-#define KC_CQOT MT(MOD_RCTL, KC_TAB)
+#define KC_CQOT MT(MOD_RCTL, KC_QUOT)
 #define KC_SHNT MT(MOD_RSFT, KC_ENT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
