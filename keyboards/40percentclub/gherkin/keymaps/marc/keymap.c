@@ -38,28 +38,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-------------------------------------------------------------------------------.
      * |  !    |   @   |   #   |   $   |   %   |   ^   |   &   |   *   |  DEL  | BSPC  |
      * |-------------------------------------------------------------------------------|
-     * |  TAB  |       |       |       |       |   -   |   {   |   =   |   }   |   '   |
+     * |  TAB  |   `   |       |   -   |       |   -   |   {   |   =   |   }   |   '   |
      * |-------------------------------------------------------------------------------|
-     * |   (   |       |       |       |       |   _   |   [   |   +   |   ]   |   )   |
+     * |   (   |   ~   |       |   _   |       |   _   |   [   |   +   |   ]   |   )   |
      * |-------------------------------------------------------------------------------|
      */
   [_LOWER] = LAYOUT_ortho_3x10(
     KC_EXLM,   KC_AT,   KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_DEL,  KC_BSPC,
-    KC_TAB,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS, KC_LCBR, KC_EQL,  KC_RCBR, KC_QUOT,
-    KC_LPRN,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, KC_LBRC, KC_PLUS, KC_RBRC, KC_RPRN
+    KC_TAB,    KC_GRV,  XXXXXXX, KC_MINS, XXXXXXX, XXXXXXX, KC_LCBR, KC_EQL,  KC_RCBR, KC_QUOT,
+    KC_LPRN,   KC_TILD, XXXXXXX, KC_UNDS, XXXXXXX, XXXXXXX, KC_LBRC, KC_PLUS, KC_RBRC, KC_RPRN
   ),
   /* Raise
      * ,-------------------------------------------------------------------------------.
      * |  1    |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   0   |
      * |-------------------------------------------------------------------------------|
-     * |  ESC  |       |   \   |   /   |   `   | LEFT  |  DOWN |   UP  | RIGHT |   "   |
+     * |  ESC  |   `   |   \   |   /   |       | LEFT  |  DOWN |   UP  | RIGHT |   "   |
      * |-------------------------------------------------------------------------------|
-     * |       |       |   |   |   ?   |   ~   |       |       |       |       | ENT   |
+     * |       |   ~   |   |   |   ?   |       |       |       |       |       | ENT   |
      * |-------------------------------------------------------------------------------|
      */
   [_RAISE] = LAYOUT_ortho_3x10(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-    KC_ESC,  XXXXXXX, KC_BSLS, KC_SLSH, KC_GRV,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_DQT,
-    RESET,   XXXXXXX, KC_PIPE, KC_QUES, KC_TILD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ENT
+    KC_ESC,  KC_GRV,  KC_BSLS, KC_SLSH, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_DQT,
+    RESET,   KC_TILD, KC_PIPE, KC_QUES, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ENT
   )
 };
