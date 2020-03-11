@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_P0,    FN_SLS,   KC_PDOT,  KC_PENT  \
   ),
   [_FN] = LAYOUT_ortho_4x4(
-    _______,  KC_VOLU,  _______,  RESET,   \
+    RESET,    KC_VOLU,  _______,  KC_BSPC, \
     KC_MPRV,  KC_MPLY,  KC_MNXT,  _______, \
     _______,  KC_VOLD,  _______,  _______, \
     _______,  _______,  _______,  KC_NLCK  \
