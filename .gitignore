@@ -70,4 +70,10 @@ id_rsa_*
 
 # python things
 __pycache__
+<<<<<<< HEAD
 .notags
+=======
+
+# prerequisites for updating ChibiOS
+/util/fmpp*
+>>>>>>> 7aff643031eec0b940b85d9f2a0d7a27fd6d4fa7
