@@ -9,7 +9,7 @@
 #define B_LWR LT(_LOWER, KC_B)
 #define SPC_RSE LT(_RAISE, KC_SPC)
 #define N_LWR LT(_LOWER, KC_N)
-#define SH_SLSH MT(MOD_RSFT, KC_SLSH)
+#define SH_ENT MT(MOD_RSFT, KC_ENT)
 #define CTRL_A MT(MOD_LCTL, KC_A)
 #define ALT_C MT(MOD_LALT, KC_C)
 #define CMD_V MT(MOD_LGUI, KC_V)
@@ -24,13 +24,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |---------------------------------------------------------------------------------------|
      * | CTL A |   S   |   D   |   F   |   G   |   H   |   J   |   K   |   L   |   ;   | CTL ' |
      * |---------------------------------------------------------------------------------------|
-     * | SH Z  |   X   | ALT C | CMD V |   B   |  SPC  |CMD N |   M   |   ,   |   .   | SH /  |
+     * | SH Z  |   X   | ALT C | CMD V |   B   |  SPC  |CMD N |   M   |   ,   |   .   | SHENT |
      * |---------------------------------------------------------------------------------------|
      */
   [0] = KEYMAP(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     CTRL_A,  KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, CTRL_QU,
-    Z_SFT,   KC_X,    ALT_C,   CMD_V,   B_LWR,   SPC_RSE, CMD_N,   KC_M,    KC_COMM, KC_DOT,  SH_SLSH
+    Z_SFT,   KC_X,    ALT_C,   CMD_V,   B_LWR,   SPC_RSE, CMD_N,   KC_M,    KC_COMM, KC_DOT,  SH_ENT
   ),
 
   /* Lower
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = KEYMAP(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PIPE,
     KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_UNDS,
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ENT
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLSH
   )
 };
 

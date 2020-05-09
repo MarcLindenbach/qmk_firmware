@@ -43,7 +43,6 @@
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
 
-#define TAPPING_TERM 180
 #define IGNORE_MOD_TAP_INTERRUPT
 
 
