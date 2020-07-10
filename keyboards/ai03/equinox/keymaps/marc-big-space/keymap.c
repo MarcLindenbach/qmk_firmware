@@ -1,0 +1,33 @@
+#include QMK_KEYBOARD_H
+
+#define _______ KC_TRNS
+#define XXXXXXX KC_NO
+
+#define KC_CTAB MT(MOD_LCTL, KC_TAB)
+#define SPC_RSE LT(1, KC_SPC)
+#define GRV_FN LT(2, KC_GRV)
+#define KC_SHNT MT(MOD_RSFT, KC_ENT)
+#define KC_SHSL MT(MOD_RSFT, KC_SLSH)
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [0] = LAYOUT_all(
+		GRV_FN,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,    KC_I,      KC_O,     KC_P,     KC_BSPC,
+		KC_CTAB,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,    KC_K,      KC_L,     XXXXXXX,  KC_SCLN,
+		KC_LSFT,  XXXXXXX,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,    KC_M,      KC_COMM,  KC_DOT,   KC_SHNT,
+		KC_LALT,  XXXXXXX,  KC_LGUI,            SPC_RSE,       SPC_RSE,       SPC_RSE,            KC_RGUI,  XXXXXXX,  KC_RCTL
+  ),
+
+  [1] = LAYOUT_all(
+		KC_ESC,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,
+		KC_DEL,   KC_BSLS,  KC_LCBR,  KC_EQL,   KC_RCBR,  XXXXXXX,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  XXXXXXX,  KC_QUOT,
+		_______,  XXXXXXX,  KC_PIPE,  KC_LBRC,  KC_PLUS,  KC_RBRC,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_SHSL,
+		_______,  _______,  _______,            _______,       _______,       _______,            _______,  _______,  _______
+  ),
+
+  [2] = LAYOUT_all(
+		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+		_______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+		_______,  _______,  _______,            _______,       _______,       _______,            EEP_RST,  _______,  RESET
+  )
+};
