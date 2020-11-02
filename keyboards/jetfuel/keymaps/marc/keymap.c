@@ -13,7 +13,7 @@
 #define CTRL_A MT(MOD_LCTL, KC_A)
 #define ALT_C MT(MOD_LALT, KC_C)
 #define CMD_V MT(MOD_LGUI, KC_V)
-#define CMD_N MT(MOD_RGUI, KC_N)
+#define CMD_J MT(MOD_RGUI, KC_J)
 #define CTRL_QU MT(MOD_LCTL, KC_QUOT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -22,56 +22,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,---------------------------------------------------------------------------------------.
      * |   Q   |   W   |   E   |   R   |   T   |   Y   |   U   |   I   |   O   |   P   | BSPC  |
      * |---------------------------------------------------------------------------------------|
-     * | CTL A |   S   |   D   |   F   |   G   |   H   |   J   |   K   |   L   |   ;   | CTL ' |
+     * | CTL A |   S   |   D   |   F   |   G   |   H   | CMD J |   K   |   L   |   ;   | CTL ' |
      * |---------------------------------------------------------------------------------------|
-     * | SH Z  |   X   | ALT C | CMD V |   B   |  SPC  |CMD N |   M   |   ,   |   .   | SHENT |
+     * | SH Z  |   X   | ALT C | CMD V |   B   |  SPC  |   N   |   M   |   ,   |   .   | SHENT |
      * |---------------------------------------------------------------------------------------|
      */
   [0] = KEYMAP(
-    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-    CTRL_A,  KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, CTRL_QU,
-    Z_SFT,   KC_X,    ALT_C,   CMD_V,   B_LWR,   SPC_RSE, CMD_N,   KC_M,    KC_COMM, KC_DOT,  SH_ENT
+    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,   KC_I,    KC_O,    KC_P,    KC_BSPC,
+    CTRL_A,  KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    CMD_J,  KC_K,    KC_L,    KC_SCLN, CTRL_QU,
+    Z_SFT,   KC_X,    ALT_C,   CMD_V,   B_LWR,   SPC_RSE, KC_N,   KC_M,    KC_COMM, KC_DOT,  SH_ENT
   ),
 
   /* Lower
      * ,---------------------------------------------------------------------------------------.
      * |  !    |   @   |   #   |   $   |   %   |   ^   |   &   |   *   |       |       |   _
      * |---------------------------------------------------------------------------------------|
-     * |  TAB  |  ESC  |       |       |       |       |   {   |   =   |   }   |   `   |   |   |
+     * |  TAB  |  ESC  |       |       |       |       |       |       |       |       |       |
      * |---------------------------------------------------------------------------------------|
-     * |   (   |       |       |       |       |       |   [   |   +   |   ]   |   ~   |   )   |
+     * |   (   |       |       |       |       |       |       |       |       |       |   )   |
      * |---------------------------------------------------------------------------------------|
      */
   [_LOWER] = KEYMAP(
     KC_EXLM,   KC_AT,   KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, XXXXXXX, XXXXXXX, KC_UNDS,
-    KC_TAB,    KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_EQL,  KC_RCBR, KC_GRV,  KC_PIPE,
-    KC_LPRN,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, KC_PLUS, KC_RBRC, KC_TILD, KC_RPRN
+    KC_TAB,    KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    KC_LPRN,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_RPRN
   ),
   /* Raise
      * ,---------------------------------------------------------------------------------------.
      * |  1    |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   0   |   -   |
      * |---------------------------------------------------------------------------------------|
-     * |   \   |   {   |   =   |   }   |       |       | LEFT  |  DOWN |   UP  | RIGHT |   \   |
+     * |   \   |   {   |   =   |   }   |   `   |       | LEFT  |  DOWN |   UP  | RIGHT |       |
      * |---------------------------------------------------------------------------------------|
-     * |   |   |   [   |   +   |   ]   |       |       |       |       |       |       |  ENT  |
+     * |   |   |   [   |   +   |   ]   |   ~   |       |       |       |       |       |   /   |
      * |---------------------------------------------------------------------------------------|
      */
   [_RAISE] = KEYMAP(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
-    KC_BSLS, KC_LCBR, KC_EQL,  KC_RCBR, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_BSLS,
-    KC_PIPE, KC_LBRC, KC_PLUS, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLSH
+    KC_BSLS, KC_LCBR, KC_EQL,  KC_RCBR, KC_GRV,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, XXXXXXX,
+    KC_PIPE, KC_LBRC, KC_PLUS, KC_RBRC, KC_TILD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLSH
   )
 };
-
-void matrix_init_user(void) {
-}
-
-void matrix_scan_user(void) {
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	return true;
-}
-
-void led_set_user(uint8_t usb_led) {
-}
