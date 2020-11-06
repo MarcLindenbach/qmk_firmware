@@ -51,14 +51,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,---------------------------------------------------------------------------------------.
      * |  1    |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   0   |       |
      * |---------------------------------------------------------------------------------------|
-     * |   \   |   {   |   =   |   }   |   `   |       | LEFT  |  DOWN |   UP  | RIGHT |   -   |
+     * |   \   |   {   |   =   |   }   |   `   | LEFT  |  DOWN |   UP  | RIGHT |       |   -   |
      * |---------------------------------------------------------------------------------------|
-     * |   |   |   [   |   +   |   ]   |   ~   |       |       |       |       |       |   /   |
+     * |   |   |   [   |   +   |   ]   |   ~   |       |       |       |       |   ?   |   /   |
      * |---------------------------------------------------------------------------------------|
      */
   [_RAISE] = KEYMAP(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    XXXXXXX,
     KC_BSLS, KC_LCBR, KC_EQL,  KC_RCBR, KC_GRV,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_MINS,
-    KC_PIPE, KC_LBRC, KC_PLUS, KC_RBRC, KC_TILD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SLSH
+    KC_PIPE, KC_LBRC, KC_PLUS, KC_RBRC, KC_TILD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, KC_SLSH
   )
 };
