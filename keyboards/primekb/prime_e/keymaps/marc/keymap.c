@@ -21,11 +21,12 @@
 #define LWR MO(1)
 #define SPC_RSE LT(2, KC_SPC)
 #define KC_SHNT MT(MOD_RSFT, KC_ENT)
+#define GUI_J MT(MOD_LGUI, KC_J)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   LAYOUT(
 		KC_GRV,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,        KC_Y,     KC_U,    KC_I,      KC_O,     KC_P,     KC_MINS,  KC_BSPC,
-		KC_CTAB,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,        KC_H,     KC_J,    KC_K,      KC_L,     KC_SCLN,  KC_QUOT,
+		KC_CTAB,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,        KC_H,     GUI_J,   KC_K,      KC_L,     KC_SCLN,  KC_QUOT,
 		KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,        MO(3),    KC_N,    KC_M,      KC_COMM,  KC_DOT,   KC_SLSH,  KC_SHNT,
 		KC_LCTL,  KC_LALT,                      KC_LGUI,  LWR,         SPC_RSE,  KC_RGUI,                                KC_RALT,  KC_RCTL
   ),
