@@ -22,6 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_DEL,   KC_BSLS,  KC_LCBR,  KC_EQL,   KC_RCBR,  XXXXXXX,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  XXXXXXX,  KC_QUOT,
 		_______,  XXXXXXX,  KC_PIPE,  KC_LBRC,  KC_PLUS,  KC_RBRC,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_SHSL,
 		_______,  _______,  _______,            _______,       _______,       _______,            _______,  _______,  RESET
+    ),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
